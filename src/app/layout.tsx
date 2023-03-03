@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import './globals.css'
+import Providers from './Providers'
 
 export const metadata = {
 	title: 'TMDB Clone',
@@ -14,10 +15,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<Header />
-				{/* Nave */}
-				{/* Search */}
-				{children}
+				<Providers>
+					<Header />
+					{/* Nave */}
+					{/* Search */}
+					{children}
+				</Providers>
 			</body>
 		</html>
 	)
