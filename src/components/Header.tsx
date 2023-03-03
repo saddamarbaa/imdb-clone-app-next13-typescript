@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
+import DarkModSwitch from './DarkModSwitch'
 import MenuItem from './MenuItem'
 
 export default function Header() {
@@ -11,10 +12,11 @@ export default function Header() {
 				<MenuItem title="HOME" address="./" icon={AiFillHome} />
 				<MenuItem title="About" address="./about" icon={BsFillInfoCircleFill} />
 			</div>
-			<div>
+			<div className="flex items-center space-x-4">
+				<DarkModSwitch />
 				<Link href={'./'}>
 					<h2 className="text-2xl">
-						<span className="mr-2 rounded-lg bg-amber-500 py-1 px-2 font-bold transition-all duration-300 hover:text-amber-600">
+						<span className="mr-2 rounded-lg bg-amber-500 py-1 px-2 font-bold transition-all duration-300">
 							IMDB
 						</span>
 						<span
