@@ -16,7 +16,7 @@ export default function Header() {
 				<DarkModSwitch />
 				<Link href={'./'}>
 					<h2 className="text-2xl">
-						<span className="mr-2 rounded-lg bg-amber-500 py-1 px-2 font-bold transition-all duration-300">
+						<span className="mr-3 rounded-lg bg-amber-500 py-1 px-2 font-bold transition-all duration-300">
 							IMDB
 						</span>
 						<span
