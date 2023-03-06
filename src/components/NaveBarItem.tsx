@@ -15,10 +15,10 @@ export default function NaveBarItem({ title, param }: Props) {
 	return (
 		<div className="">
 			<Link
-				className={`m-4 p-4 font-semibold transition-all duration-300 hover:text-amber-600 ${
+				className={`m-4 font-semibold transition-all duration-300 hover:text-amber-600 ${
 					genre && genre === param
 						? 'rounded-lg text-amber-500 underline decoration-amber-600 decoration-4 underline-offset-8'
-						: 'text-gray-100'
+						: ''
 				}`}
 				href={`/?genre=${param}`}>
 				{title}
