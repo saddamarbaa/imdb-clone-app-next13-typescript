@@ -7,14 +7,17 @@ type Props = {
 	movie: Show
 }
 
+const BASE_URL = 'https://image.tmdb.org/t/p/original'
+
 export default function Card({ movie }: Props) {
 	return (
-		<div className="group cursor-pointer rounded-lg transition-shadow duration-200 sm:m-2 sm:border sm:border-slate-400 sm:p-3 sm:shadow-md sm:hover:shadow-slate-400">
+		<div className="group m-4 mb-6 cursor-pointer rounded-lg border border-slate-400 shadow-md transition-shadow duration-200 hover:shadow-slate-400 sm:m-2 sm:mb-2 sm:p-3">
 			<Link href={`/movie/${movie.id}`}>
 				<Image
-					src={`https://image.tmdb.org/t/p/original/${
-						movie.backdrop_path || movie.poster_path
-					}`}
+					src={
+						`${BASE_URL}${movie?.backdrop_path || movie?.poster_path}` ||
+						`https://image.tmdb.org/t/p/original/4vCh8R4yd6ybOmbxRAPOzaXmLTV.jpg`
+					}
 					width={500}
 					height={300}
 					className="transition-opacity duration-200 group-hover:opacity-80 sm:rounded-t-lg"
@@ -27,12 +30,15 @@ export default function Card({ movie }: Props) {
 						maxHeight: '11rem',
 					}}
 					placeholder="blur"
-					blurDataURL="/spinner.svg"
+					blurDataURL={
+						`${BASE_URL}${movie?.backdrop_path || movie?.poster_path}` ||
+						`https://image.tmdb.org/t/p/original/4vCh8R4yd6ybOmbxRAPOzaXmLTV.jpg`
+					}
 					alt="Movie poster or backdrop"
 				/>
 
 				<div className=" p-2">
-					<p className="text-md line-clamp-7">{movie.overview}</p>
+					<p className="text-md line-clamp-6">{movie.overview}</p>
 					<h2 className="truncate text-lg font-bold">
 						{movie?.title || movie.name}
 					</h2>
