@@ -1,5 +1,5 @@
 import Results from '@/components/Results'
-import request from './utils/request'
+import request from '../utils/request'
 
 const API_KEY = process.env.API_KEY
 

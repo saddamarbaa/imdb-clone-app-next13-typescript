@@ -1,10 +1,10 @@
+import { MovieT } from '@/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FiThumbsUp } from 'react-icons/fi'
-import { Show } from './Results'
 
 type Props = {
-	movie: Show
+	movie: MovieT
 }
 
 const BASE_URL = 'https://image.tmdb.org/t/p/original'
@@ -30,11 +30,8 @@ export default function Card({ movie }: Props) {
 						maxHeight: '11rem',
 					}}
 					placeholder="blur"
-					blurDataURL={
-						`${BASE_URL}${movie?.backdrop_path || movie?.poster_path}` ||
-						`https://image.tmdb.org/t/p/original/4vCh8R4yd6ybOmbxRAPOzaXmLTV.jpg`
-					}
-					alt="Movie poster or backdrop"
+					blurDataURL="/spinner.svg"
+					alt="Movie poster or backdrop is not available"
 				/>
 
 				<div className=" p-2">
