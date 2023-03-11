@@ -15,8 +15,9 @@ export default function Card({ movie }: Props) {
 			<Link href={`/movie/${movie.id}`}>
 				<Image
 					src={
-						`${BASE_URL}${movie?.backdrop_path || movie?.poster_path}` ||
-						`https://image.tmdb.org/t/p/original/4vCh8R4yd6ybOmbxRAPOzaXmLTV.jpg`
+						movie?.poster_path || movie?.backdrop_path
+							? `${BASE_URL}${movie?.backdrop_path || movie?.poster_path}`
+							: `https://image.tmdb.org/t/p/original/4vCh8R4yd6ybOmbxRAPOzaXmLTV.jpg`
 					}
 					width={500}
 					height={300}
