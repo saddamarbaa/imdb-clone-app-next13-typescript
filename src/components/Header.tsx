@@ -7,7 +7,7 @@ import MenuItem from './MenuItem'
 
 export default function Header() {
 	return (
-		<header className="mx-3 flex max-w-6xl items-center justify-between space-y-5 sm:mx-auto">
+		<header className="mx-3 flex w-full max-w-6xl items-center justify-between space-y-5 sm:mx-auto">
 			<div className="flex items-center">
 				<MenuItem title="HOME" address="./" icon={AiFillHome} />
 				<MenuItem title="About" address="./about" icon={BsFillInfoCircleFill} />

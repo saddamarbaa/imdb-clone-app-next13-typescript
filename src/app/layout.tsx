@@ -1,7 +1,10 @@
 import Header from '@/components/Header'
 import NaveBar from '@/components/NaveBar'
 import Providers from './Providers'
+import SearchBox from '@/components/SearchBox'
+
 import './globals.css'
+import Footer from '@/components/Footer'
 
 export const metadata = {
 	title: 'TMDB Clone',
@@ -19,8 +22,9 @@ export default function RootLayout({
 				<Providers>
 					<Header />
 					<NaveBar />
-					{/* Search */}
-					{children}
+					<SearchBox />
+					<main className="flex-1">{children}</main>
+					<Footer />
 				</Providers>
 			</body>
 		</html>
