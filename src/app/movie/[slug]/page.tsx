@@ -38,6 +38,8 @@ export default async function page(props: Props) {
 		return notFound()
 	}
 
+	// await new Promise((resolve) => setTimeout(resolve, 2000))
+
 	return (
 		<div className="mx-auto  flex w-full max-w-6xl flex-col space-y-8">
 			<div className="mt-4 flex flex-col content-center  p-4 md:flex-row md:space-x-6">
