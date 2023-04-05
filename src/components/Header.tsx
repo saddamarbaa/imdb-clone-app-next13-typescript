@@ -12,7 +12,7 @@ export default function Header() {
 				<MenuItem title="HOME" address="./" icon={AiFillHome} />
 				<MenuItem title="About" address="./about" icon={BsFillInfoCircleFill} />
 			</div>
-			<div className="flex items-center space-x-4">
+			<div className="flex items-center space-x-4 pr-3">
 				<DarkModSwitch />
 				<Link href={'./'}>
 					<h2 className="text-2xl">
